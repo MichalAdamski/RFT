@@ -8,7 +8,7 @@ namespace Scripts.Refactor
 {
     public class TestStepsManager
     {
-        private const string STARTTEXT = "test";
+        
         //private readonly float[] ANGLESBANK = new float[] { -22.5f, 22.5f, -22.5f, 22.5f, -22.5f, 22.5f, -22.5f, 22.5f, -10f, 10f, -10f, 10f, -10f, 10f, -10f, 10f, -15f, 15f, -15f, 15f, -15f, 15f, -15f, 15f };
         private readonly float[] ANGLESBANK = new float[] {-45f, -40f, -30f, -20f, -15f, -10f, -5f, 5f, 10f, 15f, 20f, 30f, 40f, 45f};
 
@@ -19,7 +19,6 @@ namespace Scripts.Refactor
 
         public void StartNewTest()
         {
-            save.Save(STARTTEXT);
             Angles = random.Randomise(ANGLESBANK);
         }
 
@@ -75,6 +74,7 @@ namespace Scripts.Refactor
                 save.Save(Angles[i] + "\t" + results[i]);
             }
             */
+            SaveBasicData();
 
             SortedList<float, float> data = Sort.sorto(results, Angles);
 
@@ -84,7 +84,11 @@ namespace Scripts.Refactor
             }
             
             results.Clear();
-            ChangeToScene();
+        }
+
+        private void SaveBasicData()
+        {
+            save.Save(DataHolder.NAME + "\t" + DataHolder.AGE);
         }
 
         public void RotateRod(GameObject rod)
@@ -100,7 +104,7 @@ namespace Scripts.Refactor
             }
         }
 
-        private void ChangeToScene()
+        public void ChangeToScene()
         {
             SceneManager.LoadScene(0);
         }

@@ -45,9 +45,12 @@ namespace Scripts.Refactor
 
         private void OnCtrlClick()
         {
-            testNum = 0;
-            stepsManager.StartNewTest();
-            isTestStart = true;
+            if (!isTestStart)
+            {
+                testNum = 0;
+                stepsManager.StartNewTest();
+                isTestStart = true;
+            }
         }
 
         private void OnRotationEnd()
@@ -75,6 +78,7 @@ namespace Scripts.Refactor
         {
             isTestStart = false;
             stepsManager.SaveResults();
+            stepsManager.ChangeToScene();
         }
 
         private void Confirm()

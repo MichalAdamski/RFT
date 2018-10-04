@@ -112,10 +112,13 @@
     <Compile Include="Assets\OVR\Scripts\Util\OVRSceneSampleController.cs" />
     <Compile Include="Assets\OVR\Scripts\Util\OVRScreenFade.cs" />
     <Compile Include="Assets\OVR\Scripts\Util\OVRWaitCursor.cs" />
-    <Compile Include="Assets\Scripts\ChangeScens.cs" />
     <Compile Include="Assets\Scripts\RandomAngle.cs" />
+    <Compile Include="Assets\Scripts\Refactored\ChangeScens.cs" />
+    <Compile Include="Assets\Scripts\Refactored\CloseButtonScript.cs" />
     <Compile Include="Assets\Scripts\Refactored\ControlManager.cs" />
+    <Compile Include="Assets\Scripts\Refactored\DataHolder.cs" />
     <Compile Include="Assets\Scripts\Refactored\EventExecutor.cs" />
+    <Compile Include="Assets\Scripts\Refactored\FileChooser.cs" />
     <Compile Include="Assets\Scripts\Refactored\GuiText.cs" />
     <Compile Include="Assets\Scripts\Refactored\RandomAngle.cs" />
     <Compile Include="Assets\Scripts\Refactored\RodAndRotatingFrameMain.cs" />
@@ -128,9 +131,6 @@
     <Compile Include="Assets\Scripts\TextureSwapper.cs" />
   </ItemGroup>
   <ItemGroup>
-    <None Include="Assets\Badania\M1asd.txt" />
-    <None Include="Assets\Badania\asaa1.txt" />
-    <None Include="Assets\Badania\s1.txt" />
     <None Include="Assets\OVR\Editor\AndroidManifest.OVRSubmission.xml" />
     <None Include="Assets\OVR\Plugins\placeholder.txt" />
     <None Include="Assets\OVR\Resources\Alpha Premultiply.shader" />
